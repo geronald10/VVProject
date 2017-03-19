@@ -14,3 +14,14 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/search', function () {
+
+	$categories = DB::table('categories')->get();
+
+    return view('search', compact('categories'));
+});
+
+// Route::get('/recommendation', function () {
+
+// })
