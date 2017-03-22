@@ -1,7 +1,3 @@
-
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -222,7 +218,7 @@
  -->            
           </div>
           <div class="modal-footer">
-                  <button href="recommendation-list.blade.php" type="submit" class="btn btn-default">Search</button>
+                <button type="submit" class="btn btn-default"><a href="{{ url('recommendation') }}">Search</a></button>
             
             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
           </div>
