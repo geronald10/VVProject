@@ -12,16 +12,17 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('index');
 });
 
-Route::get('/search', function () {
+// Route::get('/search', function () {
 
-	$categories = DB::table('categories')->get();
+// 	$categories = DB::table('categories')->get();
 
-    return view('search', compact('categories'));
+//     return view('search', compact('categories'));
+// });
+
+Route::get('/recommendation', function () {
+
+	return view ('recommendation-list');
 });
-
-// Route::get('/recommendation', function () {
-
-// })
