@@ -26,3 +26,5 @@ Route::get('/recommendation', function () {
 
 	return view ('recommendation-list');
 });
+
+Route::post('vote', 'FormController@show');

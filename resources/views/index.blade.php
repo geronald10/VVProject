@@ -16,15 +16,15 @@
     <title>Grayscale - Start Bootstrap Theme</title>
 
     <!-- Bootstrap Core CSS -->
-    <link href="/assets/main/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="{{URL::to('/assets/main/vendor/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
 
     <!-- Custom Fonts -->
-    <link href="/assets/main/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="{{URL::to('/assets/main/vendor/font-awesome/css/font-awesome.min.css')}}" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
 
     <!-- Theme CSS -->
-    <link href="/assets/main/css/grayscale.min.css" rel="stylesheet">
+    <link href="{{URL::to('/assets/main/css/grayscale.min.css')}}" rel="stylesheet">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -155,10 +155,10 @@
     </footer>
 
     <!-- jQuery -->
-    <script src="/assets/main/vendor/jquery/jquery.js"></script>
+    <script src="{{URL::to('/assets/main/vendor/jquery/jquery.js')}}"></script>
 
     <!-- Bootstrap Core JavaScript -->
-    <script src="/assets/main/vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="{{URL::to('/assets/main/vendor/bootstrap/js/bootstrap.min.js')}}"></script>
 
     <!-- Plugin JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
@@ -167,7 +167,7 @@
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRngKslUGJTlibkQ3FkfTxj3Xss1UlZDA&sensor=false"></script>
 
     <!-- Theme JavaScript -->
-    <script src="/assets/main/js/grayscale.min.js"></script>
+    <script src="{{URL::to('/assets/main/js/grayscale.min.js')}}"></script>
 
     <div id="myModal" class="modal fade" role="dialog">
       <div class="modal-dialog">
@@ -178,29 +178,31 @@
             <button type="button" class="close" data-dismiss="modal">&times;</button>
             <h4 class="modal-title">What do you want?</h4>
           </div>
-          <form class="form-horizontal">
+          
+          <form class="form-horizontal" action="{{URL::to('vote')}}"" method="POST">
+          
           <div class="modal-body">
-            
                 <h4> Categories </h4>
+                {{ csrf_field() }}
               <div class="form-group">
                 <div class="col-sm-offset-0 col-sm-4">
                   <div class="checkbox">
                     <label>
-                      <input type="checkbox"> GAME
+                      <input type="checkbox" name="game" value="1"> GAME
                     </label>
                   </div>
                 </div>
                 <div class="col-sm-4">
                   <div class="checkbox">
                     <label>
-                      <input type="checkbox"> PHOTOGRAPHY
+                      <input type="checkbox" name="photography" value="2"> PHOTOGRAPHY
                     </label>
                   </div>
                 </div>
                 <div class="col-sm-4">
                   <div class="checkbox">
                     <label>
-                      <input type="checkbox"> UTILITY
+                      <input type="checkbox" name="utility" value="3"> UTILITY
                     </label>
                   </div>
                 </div>
@@ -209,17 +211,11 @@
               <div class="form-group">
                 <div class="col-sm-offset-0 col-sm-12">
                     <label>Additional Request</label>
-                    <textarea class="form-control" rows="3"></textarea>
+                    <textarea class="form-control" rows="3" name="description"></textarea>
                 </div>
                   
               </div>
 
-<!--               <div class="form-group">
-                <div class="col-sm-offset-2 col-sm-10">
-                  <button type="submit" class="btn btn-default">Sign in</button>
-                </div>
-              </div>
- -->            
           </div>
           <div class="modal-footer">
                   <button href="recommendation-list.blade.php" type="submit" class="btn btn-default">Search</button>
