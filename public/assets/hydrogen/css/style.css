@@ -1417,11 +1417,11 @@ textarea {
 }
 
 a {
-  color: #EF5353;
+  color: #ffa500;
   text-decoration: none;
 }
 a:hover, a:focus {
-  color: #e11515;
+  color: #ffa500;
   text-decoration: underline;
 }
 a:focus {
@@ -4557,6 +4557,7 @@ tbody.collapse.in {
   margin-bottom: -1px;
 }
 .nav-tabs > li > a {
+  color: #555555;
   margin-right: 2px;
   line-height: 1.42857;
   border: 1px solid transparent;
@@ -4566,7 +4567,7 @@ tbody.collapse.in {
   border-color: #eeeeee #eeeeee #ddd;
 }
 .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
-  color: #555555;
+  color: #ffa500;
   background-color: #fff;
   border: 1px solid #ddd;
   border-bottom-color: transparent;
@@ -6254,22 +6255,22 @@ button.list-group-item-danger.active:focus {
 }
 
 .panel-primary {
-  border-color: #EF5353;
+  border-color: #ffa500;
 }
 .panel-primary > .panel-heading {
   color: #fff;
-  background-color: #EF5353;
-  border-color: #EF5353;
+  background-color: #ffa500;
+  border-color: #ffa500;
 }
 .panel-primary > .panel-heading + .panel-collapse > .panel-body {
-  border-top-color: #EF5353;
+  border-top-color: #ffa500;
 }
 .panel-primary > .panel-heading .badge {
-  color: #EF5353;
+  color: #ffa500;
   background-color: #fff;
 }
 .panel-primary > .panel-footer + .panel-collapse > .panel-body {
-  border-bottom-color: #EF5353;
+  border-bottom-color: #ffa500;
 }
 
 .panel-success {
@@ -8413,3 +8414,82 @@ a > img.fh5co-align-center {
 }
 
 /*# sourceMappingURL=style.css.map */
+.content {
+  background: white;
+  padding: 2%;
+  border-color: #EEEEEE;
+  border-width: 1px;
+  border-style: solid;
+}
+
+.content-tab {
+  padding: 0px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  border-color: #EEEEEE;
+  border-width: 1px;
+  border-style: solid;
+}
+
+.img-detail-border {
+  border-style: solid;
+  border-color: #EEEEEE;
+  border-width: 1px;
+  padding: 1%;
+}
+
+.img-detail-border img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.row-title-detail {
+  text-align: left;
+  font-size: 2em;
+  padding: 1%;
+  letter-spacing: 1px;
+  font-family: "Montserrat", arial, sans-serif;
+}
+
+.phone-title-detail {
+  font-weight: bold;
+  margin-top: 0%;
+  margin-bottom: 2%;
+}
+
+#fh5co-secondary {
+  padding-top: 2em;
+}
+
+.tab-content-detail {
+  padding-left: 2em;
+  padding-right: 2em;
+  background: white;
+  margin-top: -1px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #EEEEEE;
+}
+
+.content-detail {
+  margin-bottom: 2%;
+}
+
+.hr-divider {
+  margin-top: 1%;
+  margin-bottom: 1%;
+}
+
+.border-p-detail {
+    padding: 2%;
+    border-left-width: 1px;
+    border-left-style: solid;
+    border-left-color: orange;
+}
+
+.border-p-detail .p-detail {
+  font-size: 25px;
+  font-weight: 500;
+  color: black;
+}
